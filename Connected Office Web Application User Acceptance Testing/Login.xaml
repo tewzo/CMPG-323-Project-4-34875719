@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1234,1675</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1234,1881</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Login_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="34">
@@ -46,7 +46,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="41">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="82">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>System.Private.CoreLib</AssemblyReference>
@@ -87,21 +87,27 @@
       <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
       <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="LoginSequence" sap:VirtualizedContainerService.HintSize="496,1610" sap2010:WorkflowViewState.IdRef="Sequence_4">
+  <Sequence DisplayName="LoginSequence" sap:VirtualizedContainerService.HintSize="496,1816" sap2010:WorkflowViewState.IdRef="Sequence_4">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Log in - Connected Office: Device Management" sap:VirtualizedContainerService.HintSize="434,1488" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="09bb7d61-23d6-4da5-b8b5-a43a60b587c3" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Log in - Connected Office: Device Management" sap:VirtualizedContainerService.HintSize="434,1694" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="09bb7d61-23d6-4da5-b8b5-a43a60b587c3" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Login" sap:VirtualizedContainerService.HintSize="400,1262" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <Sequence DisplayName="Login" sap:VirtualizedContainerService.HintSize="400,1468" sap2010:WorkflowViewState.IdRef="Sequence_6">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="sUser" />
               <Variable x:TypeArguments="ss:SecureString" Name="sPassword" />
@@ -138,7 +144,12 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NClick ClickType="Single" DisplayName="Click 'Log in'" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="09bb7d61-23d6-4da5-b8b5-a43a60b587c3" Version="V3">
+            <uix:NClick ClickType="Single" DisplayName="Click 'Checkbox'" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="09bb7d61-23d6-4da5-b8b5-a43a60b587c3" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://connectedoffice-devicemanagement.azurewebsites.net/Identity/Account/Login?ReturnUrl=%2FZones" DesignTimeRectangle="330, 539, 13, 13" DesignTimeScaleFactor="1" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl id='Input_RememberMe' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='Input_RememberMe' tag='INPUT' type='checkbox' class='' aaname='                                                          Remember me?                         ' /&gt;" Guid="89a5abf2-d1cc-4dbe-8950-5b499c56313d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY/hPBUBdQ54/f/5/2rRp/8vKyghikDqQehiAGwKSOHbsGJSHH4DUgdTDANwQkA2kAGT1o4ZAwKghmACrIVRJsVTJO5QAKhjy/z8A2VE4SQZFK6QAAAAASUVORK5CYII=" InformativeScreenshot="f3bb46e003498d7b50741ebe273ce6d2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Log in - Connected Office: Device Management' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Log in'" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="09bb7d61-23d6-4da5-b8b5-a43a60b587c3" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://connectedoffice-devicemanagement.azurewebsites.net/Identity/Account/Login" DesignTimeRectangle="330, 586, 70, 38" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Log in'" FullSelectorArgument="&lt;webctrl id='login-submit' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='login-submit' tag='BUTTON' type='submit' class='btn btn-primary' aaname='Log in' check:innerText='Log in' /&gt;" Guid="09b56990-2334-403c-b35e-d02951560d7e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEoAAAAqCAYAAAAUJM0rAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHOSURBVGhD7Zq9TsMwFEZ5DER5Kt6AAYkFHqIbL5IJZWZEVYesrBnK2ExUHdqlw8Wf8+c4NrmEJKT1/aQjtfG1G5/annxFElZEFDMNUR+fX3T3sqLbh5iu71+DBHOHA7gwU4lCA4puHt9o8fROi+dVmKi5wwFcmLIqUbCoJbk6BwhcwEmZShQMBr2SbJQLOClTicL+dHYIGDgpI6J+QEQxEVFMRBQTEcVERDERUUxEFJMLEbWh9VG9eLZ1tA3DsKLiHe3pROvY0TYqImo2iCgmk4tapqfiV4o4tkuzRo2XdI2bb719uml9j7JiGOS4o2WrL49JReUvfaCoelacLcYEcklmzZZSdOshCkmTsiYfp675HdOJ8rU1nueTqSfnqnHhEWWtVv0n9FxV04lKDp6XzCel5ej+5moq6CnKXj0i6qJE+drM5/qzY+tBcjCiFN7D3DhL2jX9D/OZi3KkJaKOPZl2jZLW8Qecn6ix6BQ1Pmch6i8rYShmJyrKrJWjD3LHAT8xsxOlV4+V/5YEZidqrogoJiKKiYhiIqKYOEXJtR8L37UfuUjWxHuRTK4mFqi5wwFcOK8mImiARRRhf4YI5g4HpiSkIUrij4hihegbW4C2GcGr2jAAAAAASUVORK5CYII=" InformativeScreenshot="a801ee60d0be7bf32c7a8c026f6820bf.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Log in - Connected Office: Device Management' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
               </uix:NClick.Target>
